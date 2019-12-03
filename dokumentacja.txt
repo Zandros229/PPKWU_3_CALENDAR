@@ -6,6 +6,12 @@ http://localhost:8080/calendar/nextMonth
 
 w odpowiedzi otrzymujemy plik ics który możemy eksportować do kalendarza z kalendarza wydarzeń na stronie weei
 
+linki do wystawionego serwera na heroku:
+dla kolejnego miesiaca:
+https://ppkawu-calendar.herokuapp.com/nextMonth
+dla obecnego miesiaca:
+https://ppkawu-calendar.herokuapp.com/thisMonth
+
 Zapytania:
 http://localhost:8080/calendar/thisMonth
 Odpowiedź:
