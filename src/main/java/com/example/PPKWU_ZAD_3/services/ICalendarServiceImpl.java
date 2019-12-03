@@ -29,7 +29,11 @@ public class ICalendarServiceImpl implements ICalendarService {
         month++;
         String url = "http://www.weeia.p.lodz.pl/pliki_strony_kontroler/kalendarz.php?rok=" + year + "&miesiac=" + month + "&lang=1";
         generateCalendar(getCalendarEvent(getWebsiteHTML(url)), month, year);
-        File calendarFile = new File("thisMonth.ics");
+        Random random = new Random();
+        int prefix = month + random.nextInt(100);
+        String fileName = "thisMonth" + String.valueOf(prefix) + ".isc";
+        System.out.println(fileName);
+        File calendarFile = new File(fileName);
         Biweekly.write(iCalendar).go(calendarFile);
         return calendarFile;
     }
@@ -52,7 +56,10 @@ public class ICalendarServiceImpl implements ICalendarService {
         }
         String url = "http://www.weeia.p.lodz.pl/pliki_strony_kontroler/kalendarz.php?rok=" + year + "&miesiac=" + monthString + "&lang=1";
         generateCalendar(getCalendarEvent(getWebsiteHTML(url)), month, year);
-        File calendarFile = new File("nextMonth.ics");
+        Random random = new Random();
+        int prefix = month + random.nextInt(100);
+        String fileName = "nextMonth" + String.valueOf(prefix) + ".isc";
+        File calendarFile = new File(fileName);
         Biweekly.write(iCalendar).go(calendarFile);
         return calendarFile;
     }
