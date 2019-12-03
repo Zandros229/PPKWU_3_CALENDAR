@@ -8,9 +8,9 @@ w odpowiedzi otrzymujemy plik ics który możemy eksportować do kalendarza z ka
 
 linki do wystawionego serwera na heroku:
 dla kolejnego miesiaca:
-https://ppkawu-calendar.herokuapp.com/nextMonth
+https://ppkawu-calendar.herokuapp.com/calendar/nextMonth
 dla obecnego miesiaca:
-https://ppkawu-calendar.herokuapp.com/thisMonth
+https://ppkawu-calendar.herokuapp.com/calendar/thisMonth
 
 Zapytania:
 http://localhost:8080/calendar/thisMonth
